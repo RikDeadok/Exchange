@@ -1,0 +1,494 @@
+@import "~materialize-css/dist/css/materialize.min.css";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+* {
+    box-sizing: border-box;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.flex {
+    display: flex;
+}
+html body {
+    background-color: rgb(31, 31, 31) ;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    height: 100%;
+    margin: 0;
+}
+body a {
+    text-decoration: none;
+}
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+.title__large {
+    color: rgb(0, 132, 255);
+    text-align: center;
+    margin: 0;
+    padding: 120px 0 50px 0;
+    font-size: 70px;
+    font-weight: 100;
+}
+.title__medium {
+    color: rgb(1, 154, 255);
+    margin: 0;
+    padding-top: 60px;
+    font-size: 40px;
+    font-weight: 100;
+}
+.title__small {
+    color: rgb(1, 154, 255);
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 100;
+}
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px 0 0 0;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+}
+
+
+
+
+
+/* HEADER */
+.navbar {
+    background-color: rgb(53, 53, 53);
+    height: 50px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px rgb(22, 22, 22) solid;
+}
+.navbar__logo {
+    display: block;
+    height: 50px;
+    width: 50px;
+    margin: 10px 0 0 50px;
+    padding: 0;
+}
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+}
+.navbar__menu__item {
+    display: block;
+    text-align: center;
+    list-style-type: none;
+    margin-left: 60px;
+}
+.navbar__menu__item a.active .navbar__text {
+    color: rgb(73, 167, 255);
+}
+.navbar__text {
+    margin: 0;
+    padding: 0;
+    color: rgb(204, 204, 204);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.navbar__home {
+    display: flex;
+    margin: 5px 0 0 auto;
+    padding: 0;
+}
+.navbar__home__icon {
+    margin: 0;
+    padding: 0;
+    font-size: 38px !important;
+    color: white;
+}
+.navbar__home__info {
+    display: flex;
+    margin: 0 0 0 20px;
+    padding: 0;
+    height: 40px;
+    background-color: rgb(172, 172, 172);
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 0 5px black;
+    border: solid black 1px;
+}
+.navbar__home__info__text{
+    margin: 0;
+    padding: 0 10px 0 5px;
+    font-size: 14px;
+    line-height: 18px;
+    color: white;
+}
+.navbar__home__exit {
+    margin: 0 0 0 20px;
+    padding: 0;
+    width: 60px;
+    height: 40px;
+    background-color: rgb(172, 172, 172);
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 0 5px black;
+    border: solid black 1px;
+}
+.navbar__donate {
+    margin: 5px 50px 0 20px;
+    padding: 5px 0 0 0;
+    background-color: rgb(172, 172, 172);
+    border: solid black 1px;
+    border-radius: 50px;
+    box-shadow: 0 0 5px black;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+}
+.navbar__donate__text {
+    margin: 3px;
+    padding: 0;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.navbar__donate:hover {
+    background-color: yellow;
+}
+
+
+
+
+
+/* SUBNAVBAR */
+.subnavbar {
+    background-color: rgb(24, 24, 24);
+    height: 50px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    border-bottom: 3px rgb(19, 19, 19) solid;
+}
+.subnavbar__menu {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 0;
+}
+.subnavbar__menu__item {
+    display: block;
+    text-decoration: none;
+    height: 50px;
+    text-align: center;
+    list-style-type: none;
+    margin-left: 60px;
+}
+.subnavbar__text {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.subnavbar__title {
+    margin: 5px 0 0 0;
+    padding: 5px 50px 0 0;
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-right: white solid 2px;
+    height: 40px;
+}
+.subnavbar__search {
+    display: flex;
+    margin: 5px 0 5px 50px;
+    padding: 0;
+    background-color: rgb(53, 53, 53);
+}
+.subnavbar__search__input {
+    width: 500px !important;
+    height: 40px;
+}
+.subnavbar__search__button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(32, 32, 32);
+    color: rgb(255, 255, 255);
+}
+.subnavbar__filter {
+    position: relative;
+    margin: 0;
+    padding: 10px 0 0 0;
+    display: flex;
+    cursor: pointer;
+}
+.subnavbar__filter li:hover ul {
+    visibility:visible;
+}
+.subnavbar__filter__item {
+    display: flex;
+    margin-left: 50px;
+}
+.subnavbar__dropdown {
+    visibility:hidden;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(63, 63, 63);
+    width: 200px;
+    height: auto;
+    border: solid 1px black;
+    position: absolute;
+    z-index: 1;
+    top: 30px;
+}
+.subnavbar__dropdown__item {
+    margin: 0;
+    padding: 0;
+}
+.subnavbar__menu__item a.active .subnavbar__text {
+    border-bottom: solid 1px rgb(0, 132, 255);
+}
+
+
+
+
+
+/* SLIDER__MAIN */
+.slider__main {
+    margin: 10px 30px 10px 30px;
+}
+.slider__container {
+    height: 50vh;
+    background-color: rgb(26, 26, 26);
+}
+
+
+
+
+
+/* ITEMCARD */
+.itemcard {
+    position: relative;
+    margin: 20px;
+    padding: 0;
+    width: auto;
+    transition: .5s;
+}
+.itemcard:hover {
+    position: relative;
+    margin: 20px;
+    padding: 0;
+    width: auto;
+    transform: scale(1.1);
+    transition: .5s;
+}
+.itemcard__image {
+    background: no-repeat center / 100% url(../src/images/Монетка.png);
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    height: 300px;
+    border: solid 1px white;
+}
+.itemcard__discription {
+    position: absolute;
+    top: 230px;
+    margin: 0;
+    padding: 0;
+    width: 230px;
+    height: 70px;
+    background: rgba(0,0,0,.5);
+}
+.itemcard__discription__id {
+    margin: 0;
+    padding: 5px;
+    color: white;
+    font-size: 12px;
+    line-height: 10px;
+}
+.itemcard__discription__name {
+    margin: 0;
+    padding: 0px 5px;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    font-size: 24px;
+    line-height: 22px;
+}
+.itemcard__discription__logo {
+    position: absolute;
+    top: 0px;
+    left: 230px;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(42, 42, 51);
+    background: no-repeat center / 140% url(../src/images/Logo.jpg);
+}
+
+
+
+
+
+/* ITEMPAGE */
+.leftsideitempage {
+    width: 20vw;
+    margin-left: 7vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.centeritempage {
+    width: 50vw;
+    height: 75vh;
+}
+.rightsideitempage {
+    width: 30vw;
+    margin-right: 7vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.mainpictures {
+    background: no-repeat center / 100% url(../src/images/Монетка.png);;
+    height: 75vh;
+    border: solid 1px white;
+    margin: 0;
+    padding: 0;
+}
+.additionalpictures {
+    background: no-repeat center / 100% url(../src/images/Монетка.png);;
+    height: 30vh;
+    border: solid 1px white;
+    margin: 10px;
+    padding: 0;
+}
+.discriptioncontainer {
+    scrollbar-width: none;
+    border-bottom: solid 1px white;
+    border-left: solid 1px white;
+    margin: 10px;
+    padding: 0;
+}
+.discription__title {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 700;
+}
+.discription__text {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+
+
+
+
+/* EXCHANGE */
+.exchangebox {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.exchangebox__stranger {
+    margin: 10px;
+    padding: 0;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(172, 172, 172);
+    border: solid 1px black;
+    border-radius: 15px;
+    box-shadow: 0 0 10px black inset;
+}
+.exchangebox__own {
+    margin: 10px;
+    padding: 0;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(172, 172, 172);
+    border: solid 1px black;
+    border-radius: 15px;
+    box-shadow: 0 0 10px black inset;
+}
+
+
+
+
+
+/* FOOTER */
+.footer {
+    background-color: black;
+    height: 25px;
+    display: flex;
+    margin-bottom: 0;
+    padding: 0 0 0 10px;
+}
+.footer__menu {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+.footer__menu__item {
+    text-decoration: none;
+    display: flex;
+    height: 25px;
+    text-align: center;
+    list-style-type: none;
+    margin-left: 10px;
+}
+.footer__text {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+.footer__magnit {
+    min-height: calc(100vh - 85px);
+}
+
+
+
+
+
+/* DOCUMENTATIONPAGE */
+.bg__white {
+    background-color: white;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+.whitepage h6 {
+    margin-top: 50px;
+    padding-bottom: 100px;
+    font-weight: 400;
+}
+.whitepage p {
+    font-weight: 400;
+}

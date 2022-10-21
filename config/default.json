@@ -1,5 +1,0 @@
-{
-    "port": 5000,
-    "jwtSecret": "banan lemon",
-    "mongoUri": "mongodb+srv://Deadok:081620@cluster0.drmkx.mongodb.net/app?retryWrites=true&w=majority"
-}
